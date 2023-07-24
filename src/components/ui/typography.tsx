@@ -37,7 +37,7 @@ export function H1(props: TypographyProps) {
 
 export function H2(props: TypographyProps) {
   return (
-    <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+    <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0">
       {props.children}
     </h2>
   );
@@ -61,7 +61,7 @@ export function H4(props: TypographyProps) {
 
 export function P(props: TypographyProps) {
   return (
-    <p className="leading-7 [&:not(:first-child)]:mt-6">
+    <p className="leading-7">
       {props.children}
     </p>
   );
@@ -69,7 +69,7 @@ export function P(props: TypographyProps) {
 
 export function Blockquote(props: TypographyProps) {
   return (
-    <blockquote className="mt-6 border-l-2 pl-6 italic">
+    <blockquote className="my-2 border-l-2 border-rose-900 pl-6 italic">
       {props.children}
     </blockquote>
   );
@@ -77,8 +77,21 @@ export function Blockquote(props: TypographyProps) {
 
 export function InlineCode(props: TypographyProps) {
   return (
-    <code className="relative rounded bg-rose-50 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
+    <code className="relative bg-rose-200 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-rose-900">
       {props.children}
     </code>
   );
+}
+
+export function Mark(props: TypographyProps) {
+  return (
+    <mark className="relative bg-rose-900 px-[0.3rem] py-[0.2rem] font-mono text-sm font-medium text-rose-50">
+      {props.children}
+    </mark>
+  );
+}
+
+
+export function HR() {
+  return <hr className="my-2 bg-rose-950 p-2 text-rose-50" />;
 }
