@@ -1,9 +1,9 @@
-import { H1 } from '@/components/ui/typography';
-
-export default function Home() {
+export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <H1>Hitchie Digital</H1>
+    <main className="flex h-full w-full items-center justify-center bg-rose-100">
+      <h1 className="text-5xl font-extrabold tracking-tight text-rose-950 lg:text-9xl">
+        Hitchie Digital
+      </h1>
     </main>
   );
 }

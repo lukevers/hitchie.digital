@@ -4,6 +4,29 @@ interface TypographyProps {
   children: React.ReactNode;
 }
 
+interface PageHeadingProps {
+  title: string;
+  description: React.ReactNode;
+  cta?: React.ReactNode;
+  icon?: React.ReactNode;
+}
+
+export function PageHeading(props: PageHeadingProps) {
+  return (
+    <div className="mb-4 flex items-center justify-between py-2">
+      <div className="flex flex-col gap-1.5 tracking-wide">
+        <h1 className="flex items-center gap-1.5 text-2xl font-semibold uppercase text-rose-950">
+          {props.icon}
+          {props.title}
+        </h1>
+        <span className="text-xs text-rose-950">{props.description}</span>
+      </div>
+      <div>{props.cta}</div>
+    </div>
+  );
+}
+
+
 export function H1(props: TypographyProps) {
   return (
     <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
@@ -14,7 +37,7 @@ export function H1(props: TypographyProps) {
 
 export function H2(props: TypographyProps) {
   return (
-    <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+    <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
       {props.children}
     </h2>
   );
@@ -54,7 +77,7 @@ export function Blockquote(props: TypographyProps) {
 
 export function InlineCode(props: TypographyProps) {
   return (
-    <code className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
+    <code className="relative rounded bg-rose-50 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
       {props.children}
     </code>
   );
