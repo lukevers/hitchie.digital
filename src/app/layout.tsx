@@ -1,15 +1,16 @@
-import './globals.css'
+import './globals.css';
 
-import type { Metadata } from 'next'
-import { Inter, Bungee_Hairline } from 'next/font/google'
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+
 import Axe from './axe';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Hitchie Digital',
   description: 'Digital agency',
-}
+};
 
 export default function RootLayout({
   children,
@@ -23,5 +24,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }

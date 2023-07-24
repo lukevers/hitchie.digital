@@ -1,0 +1,6 @@
+{
+  "nuxt.isNuxtApp": false,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true }
+}
