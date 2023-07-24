@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Hitchie Digital',
-  description: 'Digital agency',
+  description: 'Hitchie Digital is a full service software engineering agency offering full-stack and infrastructure hands-on-coding and team coaching.',
 };
 
 export default function RootLayout({
