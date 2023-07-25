@@ -23,7 +23,7 @@ export default function Tech(props: Props) {
     <div className="flex flex-wrap gap-2">
       {props.technologies.map((tech, index) => {
         const isDefault = index % 2 === 0 ;
-        const isShimmering = Math.round(Math.random()*100) * (seconds-index*2) % 23 === 0;
+        const isShimmering = seconds !== 0 && Math.round(Math.random()*100) * (seconds-index*2) % 23 === 0;
 
         return (
           <Badge

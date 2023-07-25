@@ -37,7 +37,7 @@ export function H1(props: TypographyProps) {
 
 export function H2(props: TypographyProps) {
   return (
-    <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0">
+    <h2 className="scroll-m-20 text-3xl font-semibold uppercase tracking-tight first:mt-0">
       {props.children}
     </h2>
   );
