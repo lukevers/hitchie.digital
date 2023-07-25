@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     emails: ['hello@hitchie.digital'],
     images: {
-      url: '/icon.png',
+      url: 'https://hitchie.digital/icon.png',
       type: 'image/png',
       width: '1024',
       height: '1024',
