@@ -91,7 +91,6 @@ export function Mark(props: TypographyProps) {
   );
 }
 
-
 export function HR() {
   return <hr className="my-2 bg-rose-950 p-2 text-rose-50" />;
 }
