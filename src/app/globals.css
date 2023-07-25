@@ -13,3 +13,12 @@ body {
   min-height: 100%;
   width: 100%;
 }
+
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
