@@ -143,6 +143,8 @@ export default function ContactForm() {
     );
   }
 
+  const canSubmit = form.formState.isDirty && !form.formState.isSubmitting && (!form.formState.isSubmitSuccessful || !response?.ok);
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-4 md:flex-row">
@@ -365,8 +367,8 @@ export default function ContactForm() {
             )}
           />
           <div className="flex flex-row-reverse gap-2">
-            <Button variant="default" type="submit">Submit</Button>
-            <Button variant="ghost" type="reset" onClick={onReset}>Reset</Button>
+            <Button variant="default" type="submit" disabled={!canSubmit}>Submit</Button>
+            <Button variant="ghost" type="reset" onClick={onReset} disabled={!form.formState.isDirty}>Reset</Button>
           </div>
         </div>
       </form>
