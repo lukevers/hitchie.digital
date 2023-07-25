@@ -14,7 +14,8 @@ body {
   width: 100%;
 }
 
-input {
+input,
+textarea {
   border-radius: 0;
   -webkit-appearance: none;
 }
