@@ -1,12 +1,15 @@
 'use server';
 
+import { WebClient } from '@slack/web-api';
+
 import db from '@/util/db';
 
 import { ContactFormSchema } from './ContactForm';
 
 export default async function ContactFormHandler(data: ContactFormSchema) {
   const content = { function: 'ContactFormHandler', data: data };
-  console.log(JSON.stringify(content, null, 2));
+  const stringifiedContent = JSON.stringify(content, null, 2);
+  console.log(stringifiedContent);
 
   await db.contactForm.create({
     data: {
@@ -20,6 +23,17 @@ export default async function ContactFormHandler(data: ContactFormSchema) {
       otherServices: data.services.otherTypes,
     },
   });
+
+  try {
+    const client = new WebClient(`${process.env.SLACK_CONTACT_FORM_BOT_TOKEN}`);
+
+    await client.chat.postMessage({
+      channel: `${process.env.SLACK_CONTACT_FORM_CHANNEL_ID}`,
+      text: `\`\`\`${stringifiedContent}\`\`\``,
+    });
+  } catch (e) {
+    console.error(e);
+  }
 
   return { ok: true };
 }
